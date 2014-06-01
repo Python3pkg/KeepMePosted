@@ -4,9 +4,6 @@ This module provides an object-oriented event handling framework.  In this
 framework, events are registered by classes and then broadcasted by individual 
 objects.  Listening for events from specific objects is made easy.
 
-.. toctree::
-   :maxdepth: 2
-
 Simple Example
 --------------
 The most important parts of this framework are the Dispatcher class and the 
@@ -174,26 +171,3 @@ single OrderedDict argument.  This is a mapping between event names and
 EventMetaData objects, in the order that the events were defined.  Return a  
 string to incorporate into the class docstring.  You may find the 
 format_arg_spec() and format_description() functions useful.
-
-API Documentation
------------------
-.. autoclass:: kemepo.Dispatcher
-    :members:
-
-.. autofunction:: kemepo.event
-
-.. autofunction:: kemepo.set_docstring_formatter
-
-.. autofunction:: kemepo.pretty_docstring_formatter
-
-.. autofunction:: kemepo.sphinx_docstring_formatter
-
-.. autofunction:: kemepo.format_arg_spec
-
-.. autofunction:: kemepo.format_description
-
-.. autoclass:: kemepo.DispatcherMetaclass
-
-.. autoclass:: kemepo.EventMetadata
-    :members:
-

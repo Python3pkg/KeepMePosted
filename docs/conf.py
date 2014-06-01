@@ -38,7 +38,7 @@ autodoc_member_order = 'bysource'
 templates_path = ['_templates']
 
 # The suffix of source filenames.
-source_suffix = '.txt'
+source_suffix = '.rst'
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
@@ -71,7 +71,7 @@ release = '0.1'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', 'api.rst']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
