@@ -158,7 +158,7 @@ meant to look good in interpreter sessions, but it's not rendered very nicely
 by Sphinx (although it does produce legal restructured text).  The *sphinx* 
 formatter is a more heavily marked-up alternative that looks better when 
 rendered by Sphinx.  To use the *sphinx* formatter in Sphinx, but these lines 
-in :file:`docs/conf.py`:
+in ``docs/conf.py``:
 
 >>> import kemepo
 >>> kemepo.set_docstring_formatter('sphinx')

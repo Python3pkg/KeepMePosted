@@ -1,8 +1,8 @@
-import distutils
+import distutils.core
 
 distutils.core.setup(
         name='KeepMePosted',
-        version='0.1',
+        version='0.2',
         author='Kale Kundert',
         author_email='kale@thekunderts.net',
         py_modules=['kemepo'],
