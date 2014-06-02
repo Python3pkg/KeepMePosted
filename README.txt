@@ -7,7 +7,7 @@ objects.  Listening for events from specific objects is made easy.
 Simple Example
 --------------
 The most important parts of this framework are the Dispatcher class and the 
-event() decorator.  Dispatcher is a base class for objects that that want to 
+event() decorator.  Dispatcher is a base class for objects that want to 
 broadcast events and the event decorator is used to register events.
 
 >>> from kemepo import Dispatcher, event
