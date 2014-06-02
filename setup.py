@@ -1,5 +1,10 @@
 import distutils.core
 
+# Uploading to PyPI
+# =================
+# $ python setup.py register -r pypi
+# $ python setup.py sdist upload -r pypi
+
 distutils.core.setup(
         name='KeepMePosted',
         version='0.2',
