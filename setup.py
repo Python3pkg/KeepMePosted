@@ -7,7 +7,7 @@ distutils.core.setup(
         author_email='kale@thekunderts.net',
         py_modules=['kemepo'],
         url='https://github.com/kalekundert/KeepMePosted',
-        download_url='https://github.com/kalekundert/KeepMePosted/tarball/0.1',
+        download_url='https://github.com/kalekundert/KeepMePosted/tarball/0.2',
         license='LICENSE.txt',
         description="""\
 An object-oriented event handling framework where events are registered by 
