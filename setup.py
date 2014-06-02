@@ -18,5 +18,5 @@ distutils.core.setup(
 An object-oriented event handling framework where events are registered by 
 classes and then broadcasted by individual objects.  Listening for events from 
 specific objects is made easy.""",
-        long_description=open('README.txt').read(),
+        long_description=open('README.rst').read(),
         keywords=['event handling'])
