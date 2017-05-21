@@ -1,4 +1,4 @@
-from __future__ import print_function
+
 
 """ 
 This module provides an object-oriented event handling framework.  In this 
@@ -66,7 +66,7 @@ def pretty_docstring_formatter(cls, registered_events):
 
     events_docstring = "Events\n------\n"
 
-    for event, metadata in registered_events.items():
+    for event, metadata in list(registered_events.items()):
         events_docstring += event + format_arg_spec(metadata) + '\n'
         events_docstring += format_description(metadata, 4) + '\n\n'
 
@@ -91,7 +91,7 @@ def sphinx_docstring_formatter(cls, registered_events):
 
     events_docstring = ":events:\n"
 
-    for event, metadata in registered_events.items():
+    for event, metadata in list(registered_events.items()):
         events_docstring += '    **' + event + '**' 
         events_docstring += format_arg_spec(metadata) + '\n'
         events_docstring += format_description(metadata, 8) + '\n\n'
@@ -193,7 +193,7 @@ class DispatcherMetaclass (type):
 
         events = []
 
-        for key, member in dict.items():
+        for key, member in list(dict.items()):
             if hasattr(member, '_event_id'):
                 events.append((member._event_id, key, member))
 
@@ -297,12 +297,12 @@ class Dispatcher (object):
         """ Print out every event registered by this class.  This is meant to 
         make debugging easier. """
 
-        native = cls._events.keys()
+        native = list(cls._events.keys())
         inherited = []
 
         for base in inspect.getmro(cls):
             if issubclass(base, Dispatcher):
-                inherited += base._events.keys()
+                inherited += list(base._events.keys())
 
         print("Native events:", native)
         print("Inherited events:", inherited)
@@ -369,7 +369,7 @@ class Dispatcher (object):
                 metadata.validate_observer(observer)
                 self._observers[event].append(observer)
 
-        for event, observer in observer_callbacks.items():
+        for event, observer in list(observer_callbacks.items()):
             metadata = self.get_registered_event_metadata(event)
             metadata.validate_observer(observer)
             self._observers[event].append(observer)
